@@ -1,6 +1,6 @@
 ---
 title: "Covid91 vaccine study Final2022"
-author: "Put your name here!"
+author: "Madeleine Alseryani"
 output: 
   html_document:
     number_sections: true
@@ -18,14 +18,58 @@ FinalDat <-read.csv(file="final_Data.csv",header=TRUE)
 FinalData <- FinalDat  %>% select(-one_of("X"))
 FinalData <- FinalData %>%
 mutate(across(where(is.character), as.factor))
+FinalData$treatment <- relevel(FinalData$treatment,ref="placebo")
+#FinalData$infected <- relevel(FinalData$infected,ref="OK")
+male = filter(FinalData, sex =="M")
+female = filter(FinalData, sex =="F")
+gay = filter(FinalData, LGBTQ =="gay")
+Druguser = filter(FinalData, DrugUser =="yes")
 ```
 
 # Introduction
 
 A new  preventative vaccine (covid91) is under test in clinical trials. Given the nature of this vaccine it is suspected that the drug may exhibit different effectiveness across the variety of subpopulations tracked. Consider population subgroups by gender( guys and gals), drug use, and sexual orientation. Write a complete report that separately considers this drug for each subgroup and your recommendations as to whether people in the subgroup should take the vaccine. Structure your report in four sections each devoted to one of the four subgroups, use null and alternative hypothesis statements and correct statistical verbage when referencing p-values in conclusions.
 
+
 ## Males
 
+
+#### Plot barplots ggplot way
+
+```{r}
+dd2 <- male %>% group_by(infected,treatment) %>% summarize(count=n()) %>% mutate(prcnt=count/sum(count))
+
+
+basicC <- ggplot(dd2,aes(x=infected,y=count,fill=treatment))
+basicC + geom_bar(stat="identity",position="dodge")
+
+#Now for percentage plot
+
+basicCC <- ggplot(dd2,aes(x=infected,y=prcnt*100,fill=treatment)) 
+basicCC + geom_bar(stat="identity", position = "dodge")
+```
+
+According to this plot, the vaccine was very effective for the male population. For the people who got covid, if we compare who took the placebo and who took the vaccine, it is about half. So the vaccine worked for the males.
+
+
+### Numerical results for males
+
+```{r}
+table1 <- xtabs(~infected + treatment, data=male)
+rowPerc(table1)
+colPerc(table1)
+```
+
+
+### Inferential results for males
+
+
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+malefish <- fisher.test(table1)
+malefish
+```
 
 ## Females
 
