@@ -49,7 +49,11 @@ basicCC <- ggplot(dd2,aes(x=infected,y=prcnt*100,fill=treatment))
 basicCC + geom_bar(stat="identity", position = "dodge")
 ```
 
-According to this plot, the vaccine was very effective for the male population. For the people who got covid, if we compare who took the placebo and who took the vaccine, it is about half. So the vaccine worked for the males.
+This bar plot represents the population of males and the relationship of the contraction of covid-19 by either taking a placebo or the vaccine.
+
+The bar plot depicts that about roughly 26% of the male population that took the vaccine got covid-19 whereas, about 68% of the males that took the placebo got covid-19. For the people who got covid, if we compare who took the placebo and who took the vaccine, we can see that the difference is about half. A substantially higher percentage of people who took the placebo contracted covid-19 versus those who got the vaccine itself. This indicates that the
+vaccine appears to be pretty effective for the male population that took it. Hence, the vaccine worked for the male population.
+
 
 
 ### Numerical results for males
@@ -60,6 +64,7 @@ rowPerc(table1)
 colPerc(table1)
 ```
 
+The numerical results above show the percentages of the male population that contracted covid-19 after taking the placebo and the vaccine. About 68% of males got covid-19 after taking the placebo and 32% got covid-19 after taking the vaccine. The vaccine is clearly effective here in preventing covid-19 among males. Those who took the vaccine were much less likely to get covid-19. The odds of getting covid-19 while taking the vaccine is 2:1.
 
 ### Inferential results for males
 
@@ -70,6 +75,22 @@ chisqtestGC(table1)
 malefish <- fisher.test(table1)
 malefish
 ```
+
+
+```{r}
+effect <- malefish$p.value/(malefish$p.value +1)
+effectivenessmale = malefish$estimate/(malefish$estimate +1)*100
+print(effectivenessmale)
+```
+
+```{r}
+low=(malefish$conf.int[1]/(malefish$conf.int[1] +1))*100
+hi=(malefish$conf.int[2]/(malefish$conf.int[2] +1))*100
+options(digits=2)
+```
+
+## Effectiveness Confidence Interval `r low`  to `r hi`
+
 
 ## Females
 
