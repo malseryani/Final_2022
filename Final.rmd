@@ -129,6 +129,7 @@ rowPerc(table1)
 colPerc(table1)
 ```
 
+The numerical results above show the percentages of the female population that contracted covid-19 after taking the placebo and the vaccine. About 59% of females got covid-19 after taking the placebo and 41% got covid-19 after taking the vaccine. The vaccine is clearly effective here in preventing covid-19 among females. Those who took the vaccine were lless likely to get covid-19. The odds of getting covid-19 while taking the vaccine is 2:1.
 
 ### Inferential results for females
 
