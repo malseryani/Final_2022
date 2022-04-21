@@ -158,7 +158,9 @@ options(digits=2)
 
 ## Effectiveness Confidence Interval `r low`  to `r hi`
 
+Above is the effectiveness for the covid-19 vaccine among the female population. If the effectiveness is above 50% that means that the vaccine is effective. Based on the interval seen above, we can easily conclude that the vaccine is effective in preventing females from contacting covid-19. 
 
+The odds ratio is approximately how effective the vaccine is. In order for the vaccine to be effective, we said that we would need the value to be atleast 50 or higher. The odds ratio for the females can be seen above as 59. The effectiveness confidence interval for the females is 53.5 to 64.01. Based on the interval above, we can conclude that the vaccine is effective for the female population.
 
 
 
