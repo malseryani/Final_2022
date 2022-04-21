@@ -231,3 +231,58 @@ The odds ratio is approximately how effective the vaccine is. In order for the v
 
 ## Druggies
 
+#### Plot barplots ggplot way
+
+```{r}
+dd2 <- Druguser %>% group_by(infected,treatment) %>% summarize(count=n()) %>% mutate(prcnt=count/sum(count))
+
+
+basicC <- ggplot(dd2,aes(x=infected,y=count,fill=treatment))
+basicC + geom_bar(stat="identity",position="dodge")
+
+#Now for percentage plot
+
+basicCC <- ggplot(dd2,aes(x=infected,y=prcnt*100,fill=treatment)) 
+basicCC + geom_bar(stat="identity", position = "dodge")
+```
+
+
+
+### Numerical results for Drugusers
+
+```{r}
+table1 <- xtabs(~infected + treatment, data=Druguser)
+rowPerc(table1)
+colPerc(table1)
+```
+
+
+
+### Inferential results for Drugusers
+
+
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+Druguserfish <- fisher.test(table1)
+Druguserfish
+```
+
+
+```{r}
+effect <- Druguserfish$p.value/(Druguserfish$p.value +1)
+effectivenessDruguser = Druguserfish$estimate/(Druguserfish$estimate +1)*100
+print(effectivenessDruguser)
+```
+
+
+```{r}
+low=(Druguserfish$conf.int[1]/(Druguserfish$conf.int[1] 
++1))*100
+hi=(Druguserfish$conf.int[2]/(Druguserfish$conf.int[2]
++1))*100
+options(digits=2)
+```
+
+## Effectiveness Confidence Interval `r low`  to `r hi`
+
