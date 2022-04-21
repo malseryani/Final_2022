@@ -140,15 +140,15 @@ femalefish <- fisher.test(table1)
 femalefish
 ```
 
+After running the Fisher's exact test, we always want to look at the given P-value. We acquired a P-value of 9e-04. This is a super small number which indicates that there is a significant difference.
 
+The odds ratio above depicts a ratio of 1.4. Therefore the females that recieved the vaccine were less likely to contact the virus than those who received the placebo.
 
 ```{r}
 effect <- femalefish$p.value/(femalefish$p.value +1)
 effectivenessfemale = femalefish$estimate/(femalefish$estimate +1)*100
 print(effectivenessfemale)
 ```
-
-
 
 ```{r}
 low=(femalefish$conf.int[1]/(femalefish$conf.int[1] +1))*100
