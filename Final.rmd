@@ -192,6 +192,9 @@ rowPerc(table1)
 colPerc(table1)
 ```
 
+The numerical results above show the percentages of the LGBTQ population that contracted covid-19 after taking the placebo and the vaccine. About 13%
+of the LGBTQ got covid-19 after taking the placebo and 87% got covid-19 after taking the vaccine. The vaccine is clearly uneffective here in preventing covid-19 among the LGBTQ community. Those who took the vaccine were much more likely to get covid-19. The odds of getting covid-19 while taking the vaccine 0.5:3. This means the chances of contracting covid with the vaccine is enormously high.
+
 ### Inferential results for LGBTQ
 
 
@@ -202,6 +205,9 @@ gayfish <- fisher.test(table1)
 gayfish
 ```
 
+After running the Fisher's exact test, we always want to look at the given P-value. We acquired a P-value of2e-09. This is a super small number which indicates that there is a significant difference and that these results are not likely or commonly to occur by chance. 
+
+The odds ratio above depicts a ratio of 0.15 which is about right according to the data analyzed. Therefore the LGBTQ individuals that recieved the vaccine were very likely to contract the virus than those who received the placebo.
 
 ```{r}
 effect <- gayfish$p.value/(gayfish$p.value +1)
@@ -217,6 +223,11 @@ options(digits=2)
 ```
 
 ## Effectiveness Confidence Interval `r low`  to `r hi`
+
+Above is the effectiveness for the covid-19 vaccine among the LGBTQ population. If the effectiveness is above 50% that means that the vaccine is effective. Based on the interval seen above, we can easily conclude that the vaccine is effective in preventing males from contacting covid-19. 
+
+The odds ratio is approximately how effective the vaccine is. In order for the vaccine to be effective, we said that we would need the value to be atleast 50 or higher. The odds ratio for the guys can be seen above as 13. This is clearly very low and indicates that it will not work. The effectiveness confidence interval for the LGBTQ individuals is 6.65 to 23.78. Based on the interval above, we can conclude that the vaccine is highly effective for the LGBTQ population.
+
 
 ## Druggies
 
