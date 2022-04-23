@@ -275,6 +275,9 @@ Druguserfish <- fisher.test(table1)
 Druguserfish
 ```
 
+After running the Fisher's exact test, we always want to look at the given P-value. We acquired a P-value of 3e-08. This is a super small number which indicates that there is a significant difference and that these results are not likely or commonly to occur by chance. 
+
+The odds ratio above depicts a ratio of 0.18 which is about right according to the data analyzed. Therefore the drug users that received the vaccine were very much more likely to contract the virus than those who received the placebo.
 
 ```{r}
 effect <- Druguserfish$p.value/(Druguserfish$p.value +1)
@@ -293,3 +296,6 @@ options(digits=2)
 
 ## Effectiveness Confidence Interval `r low`  to `r hi`
 
+Above is the effectiveness for the covid-19 vaccine among the drug user population. If the effectiveness is above 50% that means that the vaccine is effective. Based on the interval seen above, we can easily conclude that the vaccine is effective in preventing males from contacting covid-19.
+
+The odds ratio is approximately how effective the vaccine is. In order for the vaccine to be effective, we said that we would need the value to be atleast 50 or higher. The odds ratio for the drug users can be seen above as 15. This is clearly very low and indicates that it will not work. The effectiveness confidence interval for the drug user individuals is 7.11 to 26.78. Based on the interval above, we can conclude that the vaccine is not effective for the drug user population.
