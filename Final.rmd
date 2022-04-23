@@ -179,9 +179,10 @@ basicC + geom_bar(stat="identity",position="dodge")
 basicCC <- ggplot(dd2,aes(x=infected,y=prcnt*100,fill=treatment)) 
 basicCC + geom_bar(stat="identity", position = "dodge")
 ```
+
 This bar plot represents the population of LGBTQ individuals and the relationship of the contraction of covid-19 by either taking a placebo or the vaccine.
 
-The bar plot depicts that about roughly 80% of the LGBTQ population that took the vaccine got covid-19 whereas, about 19% of the LGBTQ indivduals that took the placebo got covid-19. For the LGBTQ indivduals who got covid, if we compare who took the placebo and who took the vaccine, we can see that the difference is very huge. The difference is about 5 or 6X. Therefore, taking the placebo for an LGBTQ person is safer than taking the vaccinee. A substantially higher percentage of people who took the vaccine contracted covid-19 versus those who got the placebo. This indicates that the vaccine is not effective at all. The vaccine is killing this specific group of individuals. Hence, the vaccine did not work for the LGBTQ population.
+The bar plot depicts that about roughly 80% of the LGBTQ population that took the vaccine got covid-19 whereas, about 19% of the LGBTQ indivduals that took the placebo got covid-19. For the LGBTQ indivduals who got covid, if we compare who took the placebo and who took the vaccine, we can see that the difference is very huge. The difference is about 5 or 6X. Therefore, taking the placebo for an LGBTQ person is safer than taking the vaccine. A substantially higher percentage of people who took the vaccine contracted covid-19 versus those who got the placebo. This indicates that the vaccine is not effective at all. The vaccine is killing this specific group of individuals. Hence, the vaccine did not work for the LGBTQ population.
 
 
 ### Numerical results for LGBTQ
@@ -246,6 +247,10 @@ basicCC <- ggplot(dd2,aes(x=infected,y=prcnt*100,fill=treatment))
 basicCC + geom_bar(stat="identity", position = "dodge")
 ```
 
+This bar plot represents the population of drug users and the relationship of the contraction of covid-19 by either taking a placebo or the vaccine.
+
+The bar plot depicts that about roughly 85% of the drug user population that took the vaccine got covid-19 whereas, about 15% of them that took the placebo contracted covid-19. For the individuals who got covid-19, if we compare who took the placebo and who took the vaccine, we can see that the difference is very huge. A substantially higher percentage of drug users who took the vaccine contracted covid-19 versus those who got the placebo. This indicates that the
+vaccine appears to be killing them and not effective for the drug user population that took it. Hence, the vaccine does not work for the drug user population.
 
 
 ### Numerical results for Drugusers
@@ -256,7 +261,9 @@ rowPerc(table1)
 colPerc(table1)
 ```
 
-
+The numerical results above show the percentages of the drug user population that contracted covid-19 after taking the placebo and the vaccine. About 15% 
+of drug users got covid-19 after taking the placebo and 
+85% got covid-19 after taking the vaccine. The vaccine is clearly noneffective here in preventing covid-19 among drug users. Those who took the vaccine were much more likely to get covid-19. The odds of getting covid-19 while taking the vaccine is 0.6:3.3. Therefore, for this specific group of poeple, taking the placebo is more effective than taking the vaccine.
 
 ### Inferential results for Drugusers
 
