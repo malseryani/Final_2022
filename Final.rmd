@@ -299,3 +299,8 @@ options(digits=2)
 Above is the effectiveness for the covid-19 vaccine among the drug user population. If the effectiveness is above 50% that means that the vaccine is effective. Based on the interval seen above, we can easily conclude that the vaccine is effective in preventing males from contacting covid-19.
 
 The odds ratio is approximately how effective the vaccine is. In order for the vaccine to be effective, we said that we would need the value to be atleast 50 or higher. The odds ratio for the drug users can be seen above as 15. This is clearly very low and indicates that it will not work. The effectiveness confidence interval for the drug user individuals is 7.11 to 26.78. Based on the interval above, we can conclude that the vaccine is not effective for the drug user population.
+
+
+## Conclusion
+
+In conclusion, the male population was the group that had the best effectiveness of the vaccine, followed by the females, followed by the drug users, and lastly the worst group being the LGBTQ population. In this experiment, I was able to look at bar plots and analyze them , look at numerical results, inferential results, run a fisher's exact test and analyze the P-value, and then run the confidence interval to see the effectiveness of the vaccine. After analyzing this data for each specific group given. The male population came in first place for having the most effective vaccine in preventing covid-19. The LGBTQ population had the worst effectiveness of the vaccine. 
