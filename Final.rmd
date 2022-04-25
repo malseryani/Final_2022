@@ -118,7 +118,7 @@ basicCC + geom_bar(stat="identity", position = "dodge")
 
 This bar plot represents the population of females and the relationship of the contraction of covid-19 by either taking a placebo or the vaccine.
 
-The bar plot depicts that about roughly 40% of the female population that took the vaccine got covid-19 whereas, about 59% of the females that took the placebo got covid-19. If we compare who took the placebo and who took the vaccine, we can see that the difference is about a little less than half. A larger percentage of people who took the placebo contracted covid-19 versus those who got the vaccine itself. This indicates that the vaccine appears to be effective for the female population. Even though the effectiveness of the vaccine was not as great as the males effectiveness, it is still effective just not as much. Hence the vaccine for the females works.
+The bar plot depicts that about roughly 40% of the female population that got covid-19 took the vaccine whereas, about 59% of the females that got covid-19 took the placebo. If we compare who took the placebo and who took the vaccine, we can see that the difference is about a little less than half. A larger percentage of people who got covid-19 took the placebo versus those who got the vaccine itself. This indicates that the vaccine appears to be effective for the female population. Even though the effectiveness of the vaccine was not as great as the males effectiveness, it is still effective just not as much. Hence the vaccine for the females works.
 
 
 ### Numerical results for females
@@ -129,7 +129,7 @@ rowPerc(table1)
 colPerc(table1)
 ```
 
-The numerical results above show the percentages of the female population that contracted covid-19 after taking the placebo and the vaccine. About 59% of females got covid-19 after taking the placebo and 41% got covid-19 after taking the vaccine. The vaccine is clearly effective here in preventing covid-19 among females. Those who took the vaccine were lless likely to get covid-19. The odds of getting covid-19 while taking the vaccine is 2:1.
+The numerical results above show the percentages of the female population that contracted covid-19 after taking the placebo and the vaccine. About 59% of females got covid-19 after taking the placebo and 41% got covid-19 after taking the vaccine. The vaccine is clearly effective here in preventing covid-19 among females. Those who took the vaccine were less likely to get covid-19. The odds of getting covid-19 while taking the vaccine is 2:1.
 
 ### Inferential results for females
 
@@ -142,7 +142,7 @@ femalefish
 
 After running the Fisher's exact test, we always want to look at the given P-value. We acquired a P-value of 9e-04. This is a super small number which indicates that there is a significant difference.
 
-The odds ratio above depicts a ratio of 1.4. Therefore the females that recieved the vaccine were less likely to contract the virus than those who received the placebo.
+The odds ratio above depicts a ratio of 1.4. Therefore the females that received the vaccine were less likely to contract the virus than those who received the placebo. In other words, the females that contracted covid-19 more were those that took the placebo.
 
 ```{r}
 effect <- femalefish$p.value/(femalefish$p.value +1)
