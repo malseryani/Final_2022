@@ -51,7 +51,7 @@ basicCC + geom_bar(stat="identity", position = "dodge")
 
 This bar plot represents the population of males and the relationship of the contraction of covid-19 by either taking a placebo or the vaccine.
 
-The bar plot depicts that about roughly 26% of the male population that took the vaccine got covid-19 whereas, about 68% of the males that took the placebo got covid-19. For the people who got covid, if we compare who took the placebo and who took the vaccine, we can see that the difference is about half. A substantially higher percentage of people who took the placebo contracted covid-19 versus those who got the vaccine itself. This indicates that the
+The bar plot depicts that about roughly 26% of the male population that got covid-19 took the vaccine whereas, about 68% of the males that got covid-19 took the placebo. For the people who got covid-19, if we compare who took the placebo and who took the vaccine, we can see that the difference is about half. A substantially higher percentage of people who took the placebo contracted covid-19 versus those who got the vaccine itself. This indicates that the
 vaccine appears to be pretty effective for the male population that took it. Hence, the vaccine worked for the male population.
 
 We are given two different plots to look at that share the same data. Looking at the first plot, the x-axis represents the individuals that were contacted with covid-19 or those that were not. The y-axis represents the count, which is the number of people that got covid-19 or not. In the second plot, the left two bars of the graph are all the people that got covid-19. The x-axis represents whether a person got covid-19 or not. The y-axis now represents the percentage of people that got covid-19 after taking the the placebo or taking the Vaccine. 
@@ -65,7 +65,7 @@ rowPerc(table1)
 colPerc(table1)
 ```
 
-The numerical results above show the percentages of the male population that contracted covid-19 after taking the placebo and the vaccine. About 68% of males got covid-19 after taking the placebo and 32% got covid-19 after taking the vaccine. The vaccine is clearly effective here in preventing covid-19 among males. Those who took the vaccine were much less likely to get covid-19. The odds of getting covid-19 while taking the vaccine is 2:1.
+The numerical results above show the percentages of the male population that took the placebo and contracted covid-19 and those who contracted covid-19 and took the vaccine. About 68% of males that took the placebeo got covid-19 and 32% that took the vaccine got covid-19. The vaccine is clearly effective here in preventing covid-19 among males. Those who took the vaccine were much less likely to get covid-19. The odds of getting covid-19 for this group while taking the vaccine is 2:1.
 
 ### Inferential results for males
 
@@ -79,7 +79,7 @@ malefish
 
 After running the Fisher's exact test, we always want to look at the given P-value. We acquired a P-value of 2.645e-11. This is a super small number which indicates that there is a significant difference and that these results are not likely or commonly to occur by chance. 
 
-The odds ratio above depicts a ratio of 2.09. Therefore the males that recieved the vaccine were less likely to contract the virus than those who received the placebo.
+The odds ratio above depicts a ratio of 2.09. Therefore the males that took the vaccine were less likely to contract the virus than those who received the placebo.
 
 ```{r}
 effect <- malefish$p.value/(malefish$p.value +1)
